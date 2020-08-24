@@ -1,4 +1,4 @@
-// Fonction pour additionner
+ // Fonction pour additionner
 function addition(nombreA, nombreB) {
     return nombreA + nombreB;
 }
@@ -20,20 +20,20 @@ function division(nombreA, nombreB) {
     }
     return nombreA / nombreB;
 }
-
+ 
 // Demande un choix
 do {
     var choix = Number(prompt("Que souhaitez-vous faire ?\n\n 1 - Addition\n 2 - Multiplication\n 3 - Soustraction\n 4 - Division\n"));
 } while(choix != 1 && choix != 2 && choix != 3 && choix != 4)
 
-// Demande deux nombres
+ // Demande deux nombres
 do {
     var premierNombre = Number(prompt("Entrez un premier nombre :"));
     var deuxiemeNombre = Number(prompt("Entrez un deuxième nombre : "));
 } while(isNaN(premierNombre) || isNaN(deuxiemeNombre))
 
 // Appelle la fonction choisie
-try{
+
     switch (choix) {
         case 1:
             var resultat = addition(premierNombre, deuxiemeNombre);
@@ -51,13 +51,9 @@ try{
             var resultat = division(premierNombre, deuxiemeNombre);
             break;
 
-        default:
-            throw new Error("Une erreur est survenue.");
+       
     }
-
+ 
     // Affiche le résultat
     alert("Voici le résultat : " + resultat);
-}
-catch(error) {
-    alert(error); // Si une erreur est survenue, on affiche l'erreur
-}
+
